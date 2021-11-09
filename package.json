@@ -17,8 +17,8 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint ---fix",
+    "src/**/*.js": [
+      "eslint --fix",
       "prettier --write"
     ]
   },
@@ -30,8 +30,7 @@
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --config .prettierrc --check \"{,!(node_modules)/**/}*.js\"",
-    "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
