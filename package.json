@@ -17,7 +17,10 @@
     }
   },
   "lint-staged": {
-    "*.js": ["eslint ---fix", "git add"]
+    "*.js": [
+      "eslint ---fix",
+      "git add"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,7 +30,8 @@
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --config .prettierrc --check \"{,!(node_modules)/**/}*.js\"",
-    "husky-install": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
@@ -51,7 +55,7 @@
     "@cypress/react": "^5.10.3",
     "cypress": "^8.7.0",
     "eslint-config-airbnb": "^18.2.1",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1"
   }
