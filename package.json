@@ -26,7 +26,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
+    "format": "prettier --config .prettierrc --check \"{,!(node_modules)/**/}*.js\"",
+    "husky-install": "husky install"
   },
   "eslintConfig": {
     "extends": [
