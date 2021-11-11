@@ -25,9 +25,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cypress open",
     "eject": "react-scripts eject",
-    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint": "eslint ./src --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --config .prettierrc --check \"{,!(node_modules)/**/}*.js\"",
     "prepare": "husky install"
@@ -52,8 +52,10 @@
   },
   "devDependencies": {
     "@cypress/react": "^5.10.3",
+    "@cypress/webpack-dev-server": "^1.7.0",
     "cypress": "^8.7.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1"
